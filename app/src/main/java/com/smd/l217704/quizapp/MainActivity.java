@@ -172,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (answeredQuestions[questionIndex]) {
             disableOptions();
+            Toast.makeText(MainActivity.this, "Question solved already!", Toast.LENGTH_SHORT).show();
         } else {
             enableOptions();
         }
