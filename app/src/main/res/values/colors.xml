@@ -1,0 +1,9 @@
+<resources>
+    <color name="background_color">#F5F5F5</color> <!-- Light gray for background -->
+    <color name="primary_color">#3F51B5</color> <!-- Blueish primary color -->
+    <color name="accent_color">#FF4081</color> <!-- Pinkish accent color -->
+    <color name="button_text_color">#FFFFFF</color> <!-- White for button text -->
+    <color name="text_color">#212121</color> <!-- Dark gray for text -->
+    <color name="secondary_text_color">#757575</color> <!-- Lighter gray for secondary text -->
+    <color name="timer_color">#F44336</color> <!-- Red for timer text -->
+</resources>

@@ -1,0 +1,132 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+
+    <string-array name="questions">
+        <!--1-->
+        <item>What is the next number in the sequence: 2, 4, 8, 16, __?</item>
+        <!--2-->
+        <item>If all roses are flowers and some flowers fade quickly, what can be said about roses?</item>
+        <!--3-->
+        <item>Mary’s father has 5 daughters: Nana, Nene, Nini, Nono. What is the name of the fifth daughter?</item>
+        <!--4-->
+        <item>How many months have 28 days?</item>
+        <!--5-->
+        <item>What is the only word in the English language that is spelled with its letters in alphabetical order?</item>
+        <!--6-->
+        <item>Imagine you are in a room with three doors. One door leads to certain death, another door leads to a lion that hasn’t eaten in three years, and the third door leads to a fire. Which door do you choose?</item>
+        <!--7-->
+        <item>What can you hold in your left hand but not in your right hand?</item>
+        <!--8-->
+        <item>What is always coming but never arrives?</item>
+        <!--9-->
+        <item>A man gave one son 10 cents and another son was given 15 cents. What time is it?</item>
+        <!--10-->
+        <item>You see a house with two doors. One door leads to a certain death and the other door leads to safety. There is a guard in front of each door. One guard always tells the truth, and the other guard always lies. You can ask only one question to determine which door leads to safety. What do you ask?</item>
+        <!--11-->
+        <item>A man is looking at a photograph of someone. His friend asks who it is. The man replies, "Brothers and sisters, I have none. But the father of that person in the photograph is my father’s son." Who is the person in the photograph?</item>
+        <!--12-->
+        <item>What is full of holes but still holds water?</item>
+        <!--13-->
+        <item>What has keys but can’t open locks?</item>
+        <!--14-->
+        <item>What is so fragile that saying its name breaks it?</item>
+        <!--15-->
+        <item>What is the smallest whole number that is divisible by all of the numbers from 1 to 10?</item>
+        <!--16-->
+        <item>A clock shows the time as 3:15. What is the angle between the hour and minute hands?</item>
+        <!--17-->
+        <item>What word is pronounced the same as if you remove the first letter, but spelled differently?</item>
+        <!--18-->
+        <item>What is the next number in this sequence: 2, 3, 5, 7, 11, 13, __?</item>
+        <!--19-->
+        <item>In a certain city, if it is Monday in the morning, what day is it in the evening?</item>
+        <!--20-->
+        <item>What has a head, a tail, but no body?</item>
+    </string-array>
+
+    <string-array name="options">
+        <!--1-->
+        <item>24|32|64|128</item>
+        <!--2-->
+        <item>All roses fade quickly|Some roses may fade quickly|No roses fade quickly|Roses are not flowers</item>
+        <!--3-->
+        <item>Nunu|Nana|Mary|None of the above</item>
+        <!--4-->
+        <item>1|2|12|6</item>
+        <!--5-->
+        <item>Almost|Billowy|Chlorophyll|Alphabetical</item>
+        <!--6-->
+        <item>The door with the lion|The door with the fire|The door with the death|None of the above</item>
+        <!--7-->
+        <item>Your right hand|Your left hand|Your wrist|Your fingers</item>
+        <!--8-->
+        <item>Tomorrow|Yesterday|Today|The future</item>
+        <!--9-->
+        <item>6:00|9:00|12:00|3:00</item>
+        <!--10-->
+        <item>Which door is the safest?|Which guard is telling the truth?|Which door leads to certain death?|What is the name of the guard?</item>
+        <!--11-->
+        <item>The man himself|His brother|His father|His son</item>
+        <!--12-->
+        <item>A sponge|A bucket|A strainer|A cloth</item>
+        <!--13-->
+        <item>A piano|A map|A lock|A calendar</item>
+        <!--14-->
+        <item>Silence|Glass|A promise|A secret</item>
+        <!--15-->
+        <item>30|60|120|2520</item>
+        <!--16-->
+        <item>15 degrees|30 degrees|45 degrees|60 degrees</item>
+        <!--17-->
+        <item>Read|Lead|Leed|Led</item>
+        <!--18-->
+        <item>17|19|23|29</item>
+        <!--19-->
+        <item>Monday|Tuesday|Wednesday|Thursday</item>
+        <!--20-->
+        <item>A coin|A shoe|A pen|A book</item>
+    </string-array>
+
+    <string-array name="answers">
+        <!--1-->
+        <item>32</item>
+        <!--2-->
+        <item>Some roses may fade quickly</item>
+        <!--3-->
+        <item>Mary</item>
+        <!--4-->
+        <item>12</item>
+        <!--5-->
+        <item>Alphabetical</item>
+        <!--6-->
+        <item>The door with the lion that hasn’t eaten in three years</item>
+        <!--7-->
+        <item>Your right hand</item>
+        <!--8-->
+        <item>Tomorrow</item>
+        <!--9-->
+        <item>3:00</item>
+        <!--10-->
+        <item>Which guard is telling the truth?</item>
+        <!--11-->
+        <item>His son</item>
+        <!--12-->
+        <item>A sponge</item>
+        <!--13-->
+        <item>A piano</item>
+        <!--14-->
+        <item>Silence</item>
+        <!--15-->
+        <item>2520</item>
+        <!--16-->
+        <item>7.5 degrees</item>
+        <!--17-->
+        <item>Lead</item>
+        <!--18-->
+        <item>17</item>
+        <!--19-->
+        <item>Monday</item>
+        <!--20-->
+        <item>A coin</item>
+    </string-array>
+</resources>
