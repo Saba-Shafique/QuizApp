@@ -15,6 +15,7 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+
     private TextView welcomeText, descriptionText, questionText, scoreText, resultText, timerText;
     private RadioButton option1, option2, option3, option4;
     private Button startQuizButton, nextButton, prevButton, endQuizButton, showAnswerButton;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private int totalScore = 0;
     private boolean[] answeredQuestions;
 
-    private static final long QUIZ_TIME_MILLIS = 300000; // 5 minutes
+    private static final long QUIZ_TIME_MILLIS = 5*60*1000; // 5 minutes
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis = QUIZ_TIME_MILLIS;
 
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize views
+        // views we need
         welcomeText = findViewById(R.id.welcomeText);
         descriptionText = findViewById(R.id.descriptionText);
         questionText = findViewById(R.id.questionText);
@@ -55,35 +56,29 @@ public class MainActivity extends AppCompatActivity {
         showAnswerButton = findViewById(R.id.showAnswerButton);
         optionsGroup = findViewById(R.id.optionsGroup);
 
-        // Initially, show only the welcome message and description
+        // hide the quiz elements to show welcome page
         hideQuizElements();
 
-        // Load questions, options, and answers from strings.xml
+        // Load questions, options, and answers
         questions = getResources().getStringArray(R.array.questions);
         options = getResources().getStringArray(R.array.options);
         answers = getResources().getStringArray(R.array.answers);
-
-        // Initialize answeredQuestions array
+        // an array to keep record of the questions that have been answered
         answeredQuestions = new boolean[questions.length];
 
-        // Start Quiz Button Listener
+        // startQuiz button clicked:
         startQuizButton.setOnClickListener(v -> {
-            // Hide welcome and description elements
+            // Hide welcome page elements
             welcomeText.setVisibility(View.GONE);
             descriptionText.setVisibility(View.GONE);
             startQuizButton.setVisibility(View.GONE);
 
-            // Show quiz elements
             showQuizElements();
-
-            // Start the countdown timer
             startTimer();
-
-            // Display the first question
             loadQuestion(currentQuestionIndex);
         });
 
-        // Next Button Listener
+        // when next button clicked:
         nextButton.setOnClickListener(v -> {
             if (currentQuestionIndex < questions.length - 1) {
                 if (answeredQuestions[currentQuestionIndex]) {
@@ -98,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Previous Button Listener
+        // when prev button clicked:
         prevButton.setOnClickListener(v -> {
             if (currentQuestionIndex > 0) {
                 if (answeredQuestions[currentQuestionIndex]) {
@@ -113,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // End Quiz Button Listener
+        // when "End Quiz" button clicked:
         endQuizButton.setOnClickListener(v -> {
             checkAnswer();
             updateScore();
@@ -124,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Show Answer Button Listener
+        // when "Show Answer" button clicked:
         showAnswerButton.setOnClickListener(v -> {
             if (!answeredQuestions[currentQuestionIndex]) {
                 showAnswer();
@@ -158,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateScore() {
+
         scoreText.setText("Score: " + totalScore);
     }
 
@@ -168,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
         option2.setText(currentOptions[1]);
         option3.setText(currentOptions[2]);
         option4.setText(currentOptions[3]);
-        optionsGroup.clearCheck(); // Clear the selection
+        optionsGroup.clearCheck(); // no option chosen at the start
 
         if (answeredQuestions[questionIndex]) {
             disableOptions();
@@ -191,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkAnswer() {
         int selectedOptionId = optionsGroup.getCheckedRadioButtonId();
+        // if the question is solved, it will return -1
         if (selectedOptionId != -1) {
             RadioButton selectedOption = findViewById(selectedOptionId);
             String selectedAnswer = selectedOption.getText().toString();
